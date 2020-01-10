@@ -4,8 +4,8 @@ if [ $# != 2 ]; then
     exit 1
 fi
 NAME=$1
-TECHNICAL_NAME=(echo $1 | tr '[A-Z ]' '[a-z_]')
-MODEL=(echo$2 | tr '[A-Z ]' '[a-z_]')
+TECHNICAL_NAME=$(echo $1 | tr '[A-Z ]' '[a-z_]')
+MODEL=$(echo $2 | tr '[A-Z ]' '[a-z_]')
 set -e
 if [ -d $TECHNICAL_NAME ]; then
     echo "Module '$TECHNICAL_NAME' already exists"
@@ -13,7 +13,5 @@ if [ -d $TECHNICAL_NAME ]; then
 fi
 cp -r 10.0 $TECHNICAL_NAME
 cd $TECHNICAL_NAME
-for F in (find -name '*{model}*' do
-    new_name=(echo $F | tr '\{model\}' $MODEL
-    mv $F $new_name
-done
+echo $MODEL
+rename \{model\} $MODEL **
