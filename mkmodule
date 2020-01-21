@@ -7,7 +7,7 @@ if [ $# != 2 ]; then
 fi
 MODULE=$1;
 TECHNICAL_NAME=`echo $MODULE | tr '[A-Z ]' '[a-z_]'`;
-MODEL=`echo $2 | tr '[A-Z ]' '[a-z_]'`;
+MODEL=`echo $2 | tr '[A-Z .]' '[a-z__]'`;
 set -e
 if [ -d $TECHNICAL_NAME ]; then
     echo "Module '$TECHNICAL_NAME' already exists";
