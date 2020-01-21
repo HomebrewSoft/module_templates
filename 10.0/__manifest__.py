@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': {module},  # TODO
+    'name': '{module}',  # TODO
     'version': '0.1.0',  # TODO
     'author': 'HomebrewSoft',
     'website': 'https://github.com/HomebrewSoft/',  # TODO
