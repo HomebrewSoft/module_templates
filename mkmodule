@@ -11,7 +11,7 @@ if [ -d $TECHNICAL_NAME ]; then
     echo "Module '$TECHNICAL_NAME' already exists";
     exit 1;
 fi
-cp -r 10.0 $TECHNICAL_NAME;
+cp -r $(dirname "$0")/10.0 $TECHNICAL_NAME;
 cd $TECHNICAL_NAME;
 find . -name "*{model}*" -exec rename {model} $MODEL {} \;
 find . -type f -exec sed -i "s/{model}/$MODEL/g" {} \;
