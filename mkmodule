@@ -1,17 +1,19 @@
 #!/bin/bash
+SCRIPT=`realpath $0`
+SCRIPTPATH=`dirname $SCRIPT`
 if [ $# != 2 ]; then
     echo "USAGE: $0 'NAME' model";
     exit 1;
 fi
 MODULE=$1;
-TECHNICAL_NAME=$(echo $MODULE | tr '[A-Z ]' '[a-z_]');
-MODEL=$(echo $2 | tr '[A-Z ]' '[a-z_]');
+TECHNICAL_NAME=`echo $MODULE | tr '[A-Z ]' '[a-z_]'`;
+MODEL=`echo $2 | tr '[A-Z ]' '[a-z_]'`;
 set -e
 if [ -d $TECHNICAL_NAME ]; then
     echo "Module '$TECHNICAL_NAME' already exists";
     exit 1;
 fi
-cp -r $(dirname "$0")/10.0 $TECHNICAL_NAME;
+cp -r $SCRIPTPATH/10.0 $TECHNICAL_NAME;
 cd $TECHNICAL_NAME;
 find . -name "*{model}*" -exec rename {model} $MODEL {} \;
 find . -type f -exec sed -i "s/{model}/$MODEL/g" {} \;
