@@ -3,7 +3,7 @@
     'name': '{module}',  # TODO
     'version': '0.1.0',  # TODO
     'author': 'HomebrewSoft',
-    'website': 'https://github.com/HomebrewSoft/',  # TODO
+    'website': 'https://github.com/HomebrewSoft/{technical}',  # TODO
     'depends': [  # TODO Check
     ],
     'data': [  # TODO Check
