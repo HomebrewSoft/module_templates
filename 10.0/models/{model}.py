@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from odoo import models, fields, api, _
+from odoo import _, api, fields, models, fields
 
 
 class {model}(models.Model):  # TODO Check
