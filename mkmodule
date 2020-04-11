@@ -19,3 +19,4 @@ find . -name "*{model}*" -exec rename {model} $MODEL {} \;
 find . -type f -exec sed -i "s/{model}/$MODEL/g" {} \;
 find . -type f -exec sed -i "s/{module}/$MODULE/g" {} \;
 find . -type f -exec sed -i "s/{technical}/$TECHNICAL_NAME/g" {} \;
+git init
