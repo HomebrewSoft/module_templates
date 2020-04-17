@@ -15,7 +15,7 @@ if [ -d $TECHNICAL_NAME ]; then
 fi
 cp -r $SCRIPTPATH/10.0 $TECHNICAL_NAME;
 cd $TECHNICAL_NAME;
-find . -name "*{model}*" -exec rename {model} $MODEL {} \;
+find . -name "*{model}*" -exec rename '{model}' $MODEL {} \;
 find . -type f -exec sed -i "s/{model}/$MODEL/g" {} \;
 find . -type f -exec sed -i "s/{module}/$MODULE/g" {} \;
 find . -type f -exec sed -i "s/{technical}/$TECHNICAL_NAME/g" {} \;
