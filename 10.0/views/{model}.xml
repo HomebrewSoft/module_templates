@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-<!-- TODO -->
+    <record id="{model}_view_form" model="ir.ui.view">
+        <field name="name">{model}.view.form.inherit.{TODO}</field>
+        <field name="model">{model}</field>
+        <field name="inherit_id" ref="{TODO}"/>
+        <field name="arch" type="xml">
+            
+        </field>
+    </record>
 </odoo>
