@@ -3,4 +3,4 @@ from odoo import _, api, fields, models
 
 
 class {model}(models.Model):  # TODO Check
-    _name = ''  # TODO
+    _inherit = '{model}'  # TODO
